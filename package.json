@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lowcoder-sdk": "^0.0.41",
+    "lowcoder-sdk": "^2.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
