@@ -2,20 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { LowcoderAppView } from "lowcoder-sdk";
 
-// for (
-//   var i = 0;
-//   i < document.querySelectorAll(".lowcoder-module-display").length;
-//   i++
-// ) {
-// const App = () => (
-//   <OpenblocksAppView
-//     appId={document.getElementById("module-id").value}
-//     baseUrl={
-//       document.getElementById("locoder-backend-url")?.value ||
-//       "https://api-prod.lowcoder.cloud"
-//     }
-//   />
-// );
 const opChangeDefault = (op) => {};
 const onModuleEventTriggeredDefault = (op) => {};
 for (
@@ -47,7 +33,7 @@ for (
         document
           .querySelectorAll(".lowcoder-module-container")
           [i]?.querySelector(".locoder-backend-url")?.value ||
-        "https://api-prod.lowcoder.cloud"
+        "https://api-service.lowcoder.cloud"
       }
     />
   );

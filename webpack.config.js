@@ -1,6 +1,8 @@
 const path = require("path");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
   entry: "./src/index.jsx",
   module: {
     rules: [
@@ -32,8 +34,14 @@ module.exports = {
   },
   output: {
     path: __dirname + "/dist",
-    publicPath: "/",
+    publicPath: "https://sdk.lowcoder.cloud/",
     filename: "bundle.js",
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      // Your customization if any
+    })],
   },
   devServer: {
     static: {

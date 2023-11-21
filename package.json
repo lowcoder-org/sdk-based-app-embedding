@@ -1,6 +1,6 @@
 {
   "name": "lowcoder-sdk-embedding",
-  "version": "1.0.0",
+  "version": "2.1.2",
   "description": "",
   "main": "index.jsx",
   "scripts": {
@@ -8,10 +8,10 @@
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --progress --color --port 5000",
     "build": "webpack --mode production"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Lowcoder Software LTD",
+  "license": "AGPL3",
   "dependencies": {
-    "lowcoder-sdk": "^2.1.5",
+    "lowcoder-sdk": "^2.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -21,8 +21,12 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^9.1.2",
+    "terser": "^5.22.0",
+    "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "html-webpack-plugin": "^5.5.3",
+    "copy-webpack-plugin": "^11.0.0"
   }
 }

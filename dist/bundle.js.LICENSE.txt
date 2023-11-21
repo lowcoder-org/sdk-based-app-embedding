@@ -1,4 +1,12 @@
 /*
+ @preserve
+ AgoraRTM Web SDK 1.5.1 - commit: v1.5.1-0-g5bbbcd72
+ Copyright (C) 2018-2022 Agora Lab.
+ This file is licensed under the AGORA, INC. SDK LICENSE AGREEMENT
+ A copy of this license may be found at https://www.agora.io/en/sdk-license-agreement/
+*/
+
+/*
 object-assign
 (c) Sindre Sorhus
 @license MIT
@@ -51,6 +59,8 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
+
+/*! formdata-polyfill. MIT License. Jimmy W?rting <https://jimmy.warting.se/opensource> */
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
