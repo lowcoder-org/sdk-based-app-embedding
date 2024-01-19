@@ -1,5 +1,6 @@
 const path = require("path");
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -38,11 +39,22 @@ module.exports = {
     filename: "bundle.js",
   },
   optimization: {
+    splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: 5, // Max number of parallel requests at an entry point.
+    },
     minimize: true,
     minimizer: [new TerserPlugin({
       // Your customization if any
     })],
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/*.html', to: 'dist', flatten: true },
+      ],
+    }),
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
