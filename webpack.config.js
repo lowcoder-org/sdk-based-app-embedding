@@ -4,7 +4,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: "./src/index.jsx",
+  entry: {
+    main: './src/index.jsx', 
+  },
   module: {
     rules: [
       {
@@ -36,13 +38,10 @@ module.exports = {
   output: {
     path: __dirname + "/dist",
     publicPath: "https://sdk.lowcoder.cloud/",
-    filename: "bundle.js",
+    filename: 'bundle.js',
+    chunkFilename: '[name].[contenthash].js',
   },
   optimization: {
-    splitChunks: {
-      chunks: 'all',
-      maxInitialRequests: 5, // Max number of parallel requests at an entry point.
-    },
     minimize: true,
     minimizer: [new TerserPlugin({
       // Your customization if any
@@ -51,7 +50,18 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/*.html', to: 'dist', flatten: true },
+        { 
+          from: 'src/*.html', // Path to source files
+          to: '[name][ext]', // Pattern for the output, '[name][ext]' will keep the original file name and extension
+        },
+        {
+          from: 'src/index_custom_component_files', // Path to your folder
+          to: 'index_custom_component_files/', // Destination path in the dist folder
+        },
+        {
+          from: 'src/netlify.toml', // Path to your netlify.toml file
+          to: 'netlify.toml', // Destination filename in the dist folder
+        },
       ],
     }),
   ],
