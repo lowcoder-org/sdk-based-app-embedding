@@ -59,7 +59,7 @@ module.exports = {
           to: 'index_custom_component_files/', // Destination path in the dist folder
         },
         {
-          from: 'src/netlify.toml', // Path to your netlify.toml file
+          from: 'netlify.toml', // Path to your netlify.toml file
           to: 'netlify.toml', // Destination filename in the dist folder
         },
       ],

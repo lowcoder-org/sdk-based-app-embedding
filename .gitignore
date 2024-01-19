@@ -1,4 +1,3 @@
 .DS_Store
 node_modules
-dist_backup
-dist_backup_2
+dist
